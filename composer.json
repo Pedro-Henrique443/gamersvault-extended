@@ -1,0 +1,11 @@
+{
+    "name": "thiago-luan-pedro-juan/gamersvault",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "ThiagoLuanPedroJuan\\Gamersvault\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
