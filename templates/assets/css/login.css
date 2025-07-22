@@ -1,0 +1,165 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+header{
+    background-color:#016FB9;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+}
+header img{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 0;
+    object-fit: contain;
+}
+header h3{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+#nomelogo{
+    width: 15rem;
+    height: 15rem;
+    margin-left: 0;
+    object-fit: contain;
+}
+
+.login-div {
+    margin-top: 6rem;
+    justify-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
+.login-div h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+ #btn_register,#btn_login {
+    font-family: 'Courier New', Courier, monospace;
+    width: 7rem;
+    height: 2.5rem;
+    flex: 0 0 auto;
+    padding: 0.3rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-radius: 0;
+    outline: none;
+    position: relative;
+    font-size: 1.15rem;
+}
+
+#btn_register::after, #btn_login::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #06BCEF;
+    margin: 0 auto;
+    transition: width 0.2s;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.3rem;
+}
+
+
+#btn_register:hover, #btn_login:hover {
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+#btn_register:hover::after, #btn_login:hover::after {
+    width: 80%;
+}
+
+#btn_register {
+    margin-left: auto;
+}
+
+#btn_login {
+    margin-right: 1.5rem;
+    margin-left: 3rem;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+input#email, input#password {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 0.5rem 0.4rem 0.5rem;
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input#email:focus, input#password:focus {
+    border-bottom: 2px solid #06BCEF;
+}
+
+#btn_entrar {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #016FB9;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 3.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 160px;
+    max-width: 220px;
+    height: 2.1rem;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(6,188,239,0.10);
+}
+
+#btn_entrar:hover {
+    background: #06BCEF;
+}
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+footer p{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+
+
