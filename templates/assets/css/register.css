@@ -1,8 +1,8 @@
 body {
     padding: 0;
-    background-image: url('../../../images/fundo.png');
     margin: 0;
     background-color: black;
+    background-image: url('../../../images/fundo.png');
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,8 +45,6 @@ header h3 {
     margin-top: 6rem;
     justify-items: center;
     color: white;
-    justify-content: center;
-    align-items: center;
     font-family: 'Courier New', Courier, monospace;
     flex-direction: column;
 }
@@ -134,7 +132,8 @@ label i {
 }
 
 input#email,
-input#password {
+input#password,
+input#name {
     display: block;
     width: 100%;
     border: none;
@@ -144,14 +143,15 @@ input#password {
     font-size: 1rem;
     padding: 0.7rem 0.5rem 0.4rem 0.5rem;
     border-radius: 0;
-    outline: none;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+    outline: none;
     transition: border-color 0.2s;
 }
 
 input#email:focus,
-input#password:focus {
+input#password:focus,
+input#name:focus {
     border-bottom: 2px solid #06BCEF;
 }
 

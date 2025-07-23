@@ -1,0 +1,234 @@
+body {
+    padding: 0;
+    background-image: url('../../../images/fundo.png');
+    margin: 0;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #016FB9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0 2rem;
+}
+
+header img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 0;
+    object-fit: contain;
+}
+
+header h3 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+#btn_perfil, #btn_biblioteca, #btn_comunidade {
+    width: 7rem;
+}
+
+#btn_perfil, #btn_biblioteca, #btn_comunidade, #btn_notificacao, #btn_conta {
+    font-family: 'Courier New', Courier, monospace;
+    height: 2.5rem;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-radius: 0;
+    outline: none;
+    position: relative;
+    font-size: 1.15rem;
+}
+
+#btn_conta i {
+    font-size: 2rem;
+}
+
+#btn_notificacao i {
+    font-size: 1.5rem;
+}
+
+#btn_perfil::after, #btn_biblioteca::after, #btn_comunidade::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #06BCEF;
+    margin: 0 auto;
+    transition: width 0.2s;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.3rem;
+}
+
+#btn_perfil:hover, #btn_biblioteca:hover, #btn_comunidade:hover {
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+#btn_perfil:hover::after, #btn_biblioteca:hover::after, #btn_comunidade:hover::after {
+    width: 80%;
+}
+
+#btn_comunidade {
+    margin-left: 1rem;
+}
+
+#btn_biblioteca {
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#nomelogo {
+    width: 15rem;
+    height: 15rem;
+    margin-left: 0;
+    object-fit: contain;
+}
+
+.jgs_gratuitos, .ofertas, .lancamentos {
+    background-color: #016FB9;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    width: 160px;
+    height: 57px;
+    
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+footer .social-icons {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .social-icons a,
+footer .social-icons a i {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#carouselExampleIndicators {
+    width: 45rem;  
+    margin: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.secoes {
+    margin-top: 3.5rem;
+    gap:2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.container.mt-4 {
+    max-width: 350px;
+    margin: 2rem auto 0 auto;
+    padding: 0;
+}
+
+form.d-flex {
+    gap: 0.5rem;
+}
+
+.form-control.me-2 {
+    height: 2.2rem;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.btn.btn-outline-primary {
+    height: 2.2rem;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+}
+.search-wrapper {
+    width: 100%;
+    justify-content: space-between;
+}
+.explore-games {
+    margin-top: 2rem;
+    text-align: center;
+}
+.explore-games h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#carouselExampleAutoplaying {
+    width: 40vw;
+    max-width: 100vw;
+   
+}
+
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    object-fit: contain;
+}

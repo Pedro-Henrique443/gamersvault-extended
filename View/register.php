@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamersVault</title>
-    <link rel="stylesheet" href="../templates/assets/css/login.css">
+    <link rel="stylesheet" href="../templates/assets/css/register.css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
+
 <body>
 
 <header>
@@ -21,9 +23,14 @@
 <main>
 
     <div class="login-div">
-        <h1>Login</h1>
+        <h1>Registre-se</h1>
 
         <form action="" method="post">
+                <label id="userName" for="name">
+                    <i class="bi bi-person"></i>
+                    <input type="text" id="name" autocomplete="username" placeholder="Usuário" required>
+                </label>
+
                 <label id="userEmail" for="email">
                     <i class="bi bi-envelope-at"></i>
                     <input type="email" id="email" autocomplete="username" placeholder="Email" required>
@@ -33,9 +40,15 @@
                     <i class="bi bi-key"></i>
                     <input type="password" id="password" autocomplete="current-password" placeholder="Senha" required>
                 </label>
-            <button id="btn_entrar" type="submit">ENTRAR</button>
-                Não tem uma conta?
-                <a href="register.php">Registre-se</a>
+
+                <label id="userPassword" for="password">
+                    <i class="bi bi-key"></i>
+                    <input type="password" id="password" autocomplete="current-password" placeholder="Confirme a senha" required>
+                </label>
+
+            <button id="btn_entrar" type="submit">REGISTRAR</button>
+                Já possui uma conta?
+                <a href="login.php">Entrar</a>
         </form>
     </div>
 
