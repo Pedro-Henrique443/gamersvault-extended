@@ -26,8 +26,8 @@ if ($_SESSION['is_admin'] == 1) {
 <body>
     <header>
         <div class="header-left">
-            <img src="./images/Novo Projeto.png" alt="">
-            <img id="nomelogo" src="./images/nomelogo.png" alt="">
+            <img src="images/gamersvaultlogo.png" alt="">
+            <img id="nomelogo" src="images/nomelogo.png" alt="">
 
             <button id="btn_perfil">Perfil</button>
             <button id="btn_biblioteca">Biblioteca</button>
@@ -80,7 +80,7 @@ if ($_SESSION['is_admin'] == 1) {
             <div class="card mb-3" style="width: 1400px; height: 400px; ">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/half-life.png" alt="..."
+                        <img src="./images/half-life.jpg" alt="..."
                             style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
                 </div>
@@ -88,7 +88,7 @@ if ($_SESSION['is_admin'] == 1) {
             <div class="card mb-3" style="width: 1400px; height: 400px;">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/fifa-22.png" alt="..."
+                        <img src="./images/fifa-22.jpg" alt="..."
                             style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
                 </div>
@@ -96,7 +96,7 @@ if ($_SESSION['is_admin'] == 1) {
             <div class="card mb-3" style="width: 1400px; height: 400px;">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/reddead.png" alt="..."
+                        <img src="./images/Borderlands-Psychos-Costume.png" alt="..."
                             style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
 
@@ -105,7 +105,7 @@ if ($_SESSION['is_admin'] == 1) {
             <div class="card mb-3" style="width: 1400px; height: 400px;">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/reddead.png" alt="..."
+                        <img src="./images/Skyrim.jpg" alt="..."
                             style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
 
