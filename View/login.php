@@ -1,3 +1,26 @@
+<?php
+
+require_once '../vendor/autoload.php';
+
+use Controller\UserController;
+
+$userController = new UserController();
+$loginMessage = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if ($userController->login($email, $password)) {
+        header('Location: View/home.php');
+        exit();
+    } else {
+        $loginMessage = "Email ou senha incorretos.";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,21 +32,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-<header>
-    <img src="../images/Novo Projeto.png" alt="">
-    <img id="nomelogo" src="../images/nomelogo.png" alt="">
-    <button id="btn_register">Registrar</button>
-    <button id="btn_login">Login</button>
-</header>
+    <header>
+        <img src="../images/Novo Projeto.png" alt="">
+        <img id="nomelogo" src="../images/nomelogo.png" alt="">
+        <button id="btn_register">Registrar</button>
+        <button id="btn_login">Login</button>
+    </header>
 
-<main>
+    <main>
 
-    <div class="login-div">
-        <h1>Login</h1>
+        <div class="login-div">
+            <h1>Login</h1>
 
-        <form action="" method="post">
+            <form action="" method="post">
                 <label id="userEmail" for="email">
                     <i class="bi bi-envelope-at"></i>
                     <input type="email" id="email" autocomplete="username" placeholder="Email" required>
@@ -33,13 +57,13 @@
                     <i class="bi bi-key"></i>
                     <input type="password" id="password" autocomplete="current-password" placeholder="Senha" required>
                 </label>
-            <button id="btn_entrar" type="submit">ENTRAR</button>
+                <button id="btn_entrar" type="submit">ENTRAR</button>
                 Não tem uma conta?
                 <a href="register.php">Registre-se</a>
-        </form>
-    </div>
+            </form>
+        </div>
 
-</main>
+    </main>
 
 
 </body>

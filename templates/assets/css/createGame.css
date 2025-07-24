@@ -111,16 +111,6 @@ header h3 {
     object-fit: contain;
 }
 
-.jgs_gratuitos, .ofertas, .lancamentos {
-    background-color: #016FB9;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    width: 260%;
-    height: 160%;
-    
-}
-
 footer {
     margin-top: auto;
     margin-bottom: 1rem;
@@ -152,18 +142,6 @@ footer .social-icons a i {
     color: white;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-#carouselExampleIndicators {
-    width: 45rem;  
-    margin: 0;
-}
 
 .header-left {
     display: flex;
@@ -176,61 +154,95 @@ main {
     gap: 1rem;
 }
 
-.secoes {
-    margin-top: 3.5rem;
-    gap:3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-}
-
-.container.mt-4 {
-    max-width: 350px;
-    margin: 2rem auto 0 auto;
-    padding: 0;
-}
-
-form.d-flex {
-    gap: 0.5rem;
-}
-
-.form-control.me-2 {
-    height: 2.2rem;
-    font-size: 1rem;
-    padding: 0.2rem 0.5rem;
-}
-
-.btn.btn-outline-primary {
-    height: 2.2rem;
-    font-size: 1rem;
-    padding: 0.2rem 1rem;
-}
-.search-wrapper {
-    width: 100%;
-    justify-content: space-between;
-}
-.explore-games {
-    margin-top: 2rem;
-    text-align: center;
-}
-.explore-games h1 {
+main h1{
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 2rem;
     font-size: 2rem;
-    margin-bottom: 1rem;
-}
-#carouselExampleAutoplaying {
-    width: 40vw;
-    max-width: 100vw;
-   
 }
 
-.carousel-inner,
-.carousel-item,
-.carousel-item img {
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
-    object-fit: contain;
+label {
+    display: flex;
+    border: 2px dashed #06BCEF;
+    border-radius: 25rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
+
+label i {
+    margin-top: 10px;
+}
+
+input#title,
+input#price,
+input#developer,
+input#publisher,
+input#cover_image {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1.45rem;
+    padding: 0.7rem 0.5rem 0.4rem 0.5rem;
+    border-radius: 0;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input#title:focus,
+input#price:focus,
+input#developer:focus,
+input#publisher:focus,
+input#cover_image:focus {
+    border-bottom: 2px solid #06BCEF;
+}
+
+#btn_confirmar {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #016FB9;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 3.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 160px;
+    max-width: 220px;
+    height: 2.1rem;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(6, 188, 239, 0.10);
+}
+
+#btn_confirmar:hover {
+    background: #06BCEF;
+}
+
+form a {
+    color: #06BCEF;
+    text-decoration: none;
+}
+.cadastro-game {
+    margin-top: 6rem;
+    justify-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
+
+label#cover_image {
+    justify-content: flex-start;
+    margin-right: -0.1rem;
+}
+
+
+
+
+
+

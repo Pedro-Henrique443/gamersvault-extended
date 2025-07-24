@@ -133,7 +133,8 @@ label i {
 
 input#email,
 input#password,
-input#name {
+input#username,
+input#confirmPassword {
     display: block;
     width: 100%;
     border: none;
@@ -151,7 +152,8 @@ input#name {
 
 input#email:focus,
 input#password:focus,
-input#name:focus {
+input#confirmPassword:focus,
+input#username:focus {
     border-bottom: 2px solid #06BCEF;
 }
 

@@ -1,3 +1,40 @@
+<?php
+// BUSCANDO E CARREGANDO O ARQUIVO AUTOLOAD
+require_once '../vendor/autoload.php';
+
+// IMPORTANDO O USERCONTROLLER
+use Controller\UserController;
+
+$userController = new UserController();
+
+$registerUserMessage = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        // USO DO CONTROLLER PARA VERIFICAÇÃO DE E-MAIL E CADASTRO DE USUÁRIO
+
+        // JÁ EXISTE UM E-MAIL CADASTRADO?
+        if ($userController->checkUserByEmail($email)) {
+            $registerUserMessage = "Já existe um usuário cadastrado com esse endereço de e-mail.";
+        } else {
+            // SE O E-MAIL JÁ EXISTE, CRIE O USUÁRIO
+            if ($userController->createUser($username, $email, $password)) {
+                // REDIRECIONAR PARA UMA OUTRA PÁGINA, QUANDO O USUÁRIO FOR CADASTRADO
+                header('Location: ../index.php');
+                exit();
+            } else {
+                $registerUserMessage = 'Erro ao registrar informações.';
+            }
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,46 +50,47 @@
 
 <body>
 
-<header>
-    <img src="../images/Novo Projeto.png" alt="">
-    <img id="nomelogo" src="../images/nomelogo.png" alt="">
-    <button id="btn_register">Registrar</button>
-    <button id="btn_login">Login</button>
-</header>
+    <header>
+        <img src="../images/Novo Projeto.png" alt="">
+        <img id="nomelogo" src="../images/nomelogo.png" alt="">
+        <button id="btn_register">Registrar</button>
+        <button id="btn_login">Login</button>
+    </header>
 
-<main>
+    <main>
 
-    <div class="login-div">
-        <h1>Registre-se</h1>
+        <div class="login-div">
+            <h1>Registre-se</h1>
 
-        <form action="" method="post">
-                <label id="userName" for="name">
+            <form action="" method="post">
+                <label id="username" for="username">
                     <i class="bi bi-person"></i>
-                    <input type="text" id="name" autocomplete="username" placeholder="Usuário" required>
+                    <input type="text" id="username" autocomplete="username" placeholder="Usuário" required>
                 </label>
 
-                <label id="userEmail" for="email">
+                <label id="email" for="email">
                     <i class="bi bi-envelope-at"></i>
-                    <input type="email" id="email" autocomplete="username" placeholder="Email" required>
+                    <input type="email" id="email" autocomplete="email" placeholder="Email" required>
                 </label>
 
-                <label id="userPassword" for="password">
+                <label id="password" for="password">
                     <i class="bi bi-key"></i>
-                    <input type="password" id="password" autocomplete="current-password" placeholder="Senha" required>
+                    <input type="password" id="password" placeholder="Senha" required>
                 </label>
 
-                <label id="userPassword" for="password">
+                <label id="confirmPassword" for="confirmPassword">
                     <i class="bi bi-key"></i>
-                    <input type="password" id="password" autocomplete="current-password" placeholder="Confirme a senha" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
                 </label>
 
-            <button id="btn_entrar" type="submit">REGISTRAR</button>
+                <button id="btn_entrar" type="submit">REGISTRAR</button>
                 Já possui uma conta?
                 <a href="login.php">Entrar</a>
-        </form>
-    </div>
+            </form>
+            <p> <?php echo $registerUserMessage; ?> </p>
+        </div>
 
-</main>
+    </main>
 
 
 </body>

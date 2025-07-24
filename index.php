@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if ($_SESSION['is_admin'] == 1) {
+    echo "<a href='admin_panel.php'>Painel de Admin</a>";
+} else {
+    echo "Bem-vindo, usuário!";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +41,7 @@
     </header>
 
     <main>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 800px; height: 450px;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="images/reddead.png" class="d-block w-100" alt="...">
@@ -58,36 +69,46 @@
             <button class="ofertas">OFERTAS</button>
             <button class="lancamentos">LANÇAMENTOS</button>
         </div>
-        <div class="container mt-4">
+        <div class="container mt-3">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
                 <button class="btn btn-outline-primary" type="submit">Buscar</button>
             </form>
         </div>
         <div class="container-fluid"
-            style="display: flex; justify-content: space-between; gap: 2rem; max-width: 700px; margin: 2rem auto 0 auto;">
-            <div class="card mb-3" style="max-width: 200px; height: 400px;">
-                <div class="row g-0" style="height: 100%;" >
+            style="display: flex; justify-content: space-between; gap: 2rem; max-width: 1200px; margin: 2rem auto 0 auto;">
+            <div class="card mb-3" style="width: 1400px; height: 400px; ">
+                <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/reddead.png" alt="..."
-                            style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                        <img src="./images/half-life.png" alt="..."
+                            style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 200px; height: 400px;">
+            <div class="card mb-3" style="width: 1400px; height: 400px;">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
-                        <img src="./images/reddead.png" alt="..."
-                            style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                        <img src="./images/fifa-22.png" alt="..."
+                            style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="max-width: 200px; height: 400px;">
+            <div class="card mb-3" style="width: 1400px; height: 400px;">
                 <div class="row g-0" style="height: 100%;">
                     <div class="col-md-6" style="height: 100%; padding: 0;">
                         <img src="./images/reddead.png" alt="..."
-                            style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+                            style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
                     </div>
+
+                </div>
+            </div>
+            <div class="card mb-3" style="width: 1400px; height: 400px;">
+                <div class="row g-0" style="height: 100%;">
+                    <div class="col-md-6" style="height: 100%; padding: 0;">
+                        <img src="./images/reddead.png" alt="..."
+                            style="display: block; width: 200%; height: 100%; object-fit: cover; border-radius: 0;">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -96,41 +117,119 @@
             <div class="explore-games-wrapper"
                 style="display: flex; justify-content: space-between; gap: 2rem; max-width: 60rem; margin: 2rem auto;">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="./images/reddead.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card’s content.</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="./images/reddead.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card’s content.</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="./images/reddead.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card’s content.</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="./images/reddead.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card’s content.</p>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+
+                <!-- <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card’s content.</p>
-                    </div>
+                    </div> -->
+
+            </div>
+        </div>
+        <div class="explore-games-wrapper2"
+            style="display: flex; justify-content: space-between; gap: 2rem; max-width: 60rem; margin: 2rem auto;">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
                 </div>
             </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="explore-games-wrapper3"
+            style="display: flex; justify-content: space-between; gap: 2rem; max-width: 60rem; margin: 2rem auto;">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/reddead.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card’s content.</p>
+                </div>
+            </div>
+
+        </div>
         </div>
     </main>
     <footer>
