@@ -14,7 +14,7 @@
 
     <header>
         <div class="header-left">
-            <img src="../images/Novo Projeto.png" alt="">
+            <img src="../images/gamersvaultlogo.png" alt="">
             <img id="nomelogo" src="../images/nomelogo.png" alt="">
 
             <button id="btn_perfil">Perfil</button>

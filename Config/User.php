@@ -22,7 +22,7 @@ class User
     {
         try {
             // INSERÇÃO DE DADOS NA LINGUAGEM SQL
-            $sql = 'INSERT INTO user (username, email, password, created_at) VALUES (:username, :email, :password, NOW())';
+            $sql = 'INSERT INTO users (username, email, password, created_at) VALUES (:username, :email, :password, NOW())';
 
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -49,7 +49,7 @@ class User
     public function getUserByEmail($email)
     {
         try {
-            $sql = "SELECT * FROM user WHERE email = :email LIMIT 1";
+            $sql = "SELECT * FROM users WHERE email = :email LIMIT 1";
 
             $stmt = $this->db->prepare($sql);
 
@@ -63,16 +63,17 @@ class User
     }
 
     // OBTER INFORMAÇÕES DO USUÁRIO
-    public function getUserInfo($id, $username, $email)
+    public function getUserInfo($id, $username, $email, $is_admin)
     {
         try {
-            $sql = "SELECT username, email FROM user WHERE id = :id AND username = :username AND email = :email";
+            $sql = "SELECT username, email, is_admin FROM users WHERE id = :id AND username = :username AND email = :email AND is_admin = :is_admin";
 
             $stmt = $this->db->prepare($sql);
 
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
             $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+            $stmt->bindParam(":is_admin", $is_admin, PDO::PARAM_TINYINT);
 
             $stmt->execute();
 

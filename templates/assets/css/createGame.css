@@ -1,177 +1,185 @@
 body {
-    padding: 0;
-    background-image: url('../../../images/fundo.png');
-    margin: 0;
-    background-color: black;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+  padding: 0;
+  background-image: url("../../../images/fundo.png");
+  margin: 0;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 header {
-    background-color: #016FB9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5rem;
-    padding: 0 2rem;
+  background-color: #016fb9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 2rem;
 }
 
 header img {
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-left: 0;
-    object-fit: contain;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0;
+  object-fit: contain;
 }
 
 header h3 {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: 1rem;
-    font-size: 1.5rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
-#btn_perfil, #btn_biblioteca, #btn_comunidade {
-    width: 7rem;
+#btn_perfil,
+#btn_biblioteca,
+#btn_comunidade {
+  width: 7rem;
 }
 
-#btn_perfil, #btn_biblioteca, #btn_comunidade, #btn_notificacao, #btn_conta {
-    font-family: 'Courier New', Courier, monospace;
-    height: 2.5rem;
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: color 0.2s;
-    border-radius: 0;
-    outline: none;
-    position: relative;
-    font-size: 1.15rem;
+#btn_perfil,
+#btn_biblioteca,
+#btn_comunidade,
+#btn_notificacao,
+#btn_conta {
+  font-family: "Courier New", Courier, monospace;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.15rem;
 }
 
 #btn_conta i {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 #btn_notificacao i {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-#btn_perfil::after, #btn_biblioteca::after, #btn_comunidade::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 3px;
-    background: #06BCEF;
-    margin: 0 auto;
-    transition: width 0.2s;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0.3rem;
+#btn_perfil::after,
+#btn_biblioteca::after,
+#btn_comunidade::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #06bcef;
+  margin: 0 auto;
+  transition: width 0.2s;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.3rem;
 }
 
-#btn_perfil:hover{
-    width: 80px;
-}#btn_biblioteca:hover, #btn_comunidade:hover {
-    background: transparent;
-    color: #ffffff;
-    outline: none;
+#btn_biblioteca:hover,
+#btn_comunidade:hover {
+  background: transparent;
+  color: #ffffff;
+  outline: none;
 }
 
-#btn_perfil:hover::after, #btn_biblioteca:hover::after, #btn_comunidade:hover::after {
-    width: 80%;
+#btn_perfil:hover::after,
+#btn_biblioteca:hover::after,
+#btn_comunidade:hover::after {
+  width: 80%;
 }
 
 #btn_comunidade {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 #btn_biblioteca {
-    flex-direction: column;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 
 #nomelogo {
-    width: 15rem;
-    height: 15rem;
-    margin-left: 0;
-    object-fit: contain;
+  width: 15rem;
+  height: 15rem;
+  margin-left: 0;
+  object-fit: contain;
 }
 
 footer {
-    margin-top: auto;
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 footer p {
-    color: white;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
 }
 
 footer .social-icons {
-    text-decoration: none;
-    color: white;
-    font-size: 1.15rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 footer .social-icons a,
 footer .social-icons a i {
-    color: white;
+  color: white;
 }
 
-
 .header-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-main h1{
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 2rem;
+main h1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
 }
 
 label {
-    display: flex;
-    border: 2px dashed #06BCEF;
-    border-radius: 25rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+  display: flex;
+  border: 2px dashed #06bcef;
+  border-radius: 25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 label i {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 input#title,
@@ -179,19 +187,19 @@ input#price,
 input#developer,
 input#publisher,
 input#cover_image {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    font-size: 1.45rem;
-    padding: 0.7rem 0.5rem 0.4rem 0.5rem;
-    border-radius: 0;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    outline: none;
-    transition: border-color 0.2s;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1.45rem;
+  padding: 0.7rem 0.5rem 0.4rem 0.5rem;
+  border-radius: 0;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
 input#title:focus,
@@ -199,50 +207,44 @@ input#price:focus,
 input#developer:focus,
 input#publisher:focus,
 input#cover_image:focus {
-    border-bottom: 2px solid #06BCEF;
+  border-bottom: 2px solid #06bcef;
 }
 
 #btn_confirmar {
-    display: block;
-    margin: 0 auto 1.5rem auto;
-    border-radius: 15px;
-    cursor: pointer;
-    background: #016FB9;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 3.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    min-width: 160px;
-    max-width: 220px;
-    height: 2.1rem;
-    transition: background 0.2s;
-    box-shadow: 0 2px 8px 0 rgba(6, 188, 239, 0.10);
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #016fb9;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 3.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 160px;
+  max-width: 220px;
+  height: 2.1rem;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(6, 188, 239, 0.1);
 }
 
 #btn_confirmar:hover {
-    background: #06BCEF;
+  background: #06bcef;
 }
 
 form a {
-    color: #06BCEF;
-    text-decoration: none;
+  color: #06bcef;
+  text-decoration: none;
 }
 .cadastro-game {
-    margin-top: 6rem;
-    justify-items: center;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    flex-direction: column;
+  margin-top: 6rem;
+  justify-items: center;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  flex-direction: column;
 }
 
 label#cover_image {
-    justify-content: flex-start;
-    margin-right: -0.1rem;
+  justify-content: flex-start;
+  margin-right: -0.1rem;
 }
-
-
-
-
-
-

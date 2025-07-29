@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <header>
-        <img src="../images/Novo Projeto.png" alt="">
+        <img src="../images/gamersvaultlogo.png" alt="">
         <img id="nomelogo" src="../images/nomelogo.png" alt="">
         <button id="btn_register">Registrar</button>
         <button id="btn_login">Login</button>
@@ -62,25 +62,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-div">
             <h1>Registre-se</h1>
 
-            <form action="" method="post">
+            <form method="POST">
                 <label id="username" for="username">
                     <i class="bi bi-person"></i>
-                    <input type="text" id="username" autocomplete="username" placeholder="Usuário" required>
+                    <input type="text" name="username" id="username" autocomplete="username" placeholder="Usuário" required>
                 </label>
 
                 <label id="email" for="email">
                     <i class="bi bi-envelope-at"></i>
-                    <input type="email" id="email" autocomplete="email" placeholder="Email" required>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Email" required>
                 </label>
 
                 <label id="password" for="password">
                     <i class="bi bi-key"></i>
-                    <input type="password" id="password" placeholder="Senha" required>
+                    <input type="password" name="password" id="password" placeholder="Senha" required>
                 </label>
 
                 <label id="confirmPassword" for="confirmPassword">
                     <i class="bi bi-key"></i>
-                    <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" required>
                 </label>
 
                 <button id="btn_entrar" type="submit">REGISTRAR</button>

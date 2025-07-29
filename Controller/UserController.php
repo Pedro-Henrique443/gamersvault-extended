@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Model\User;
-use Exception;
+// use Exception;
 
 class UserController
 {
@@ -52,7 +52,7 @@ class UserController
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
-            var_dump($_SESSION);
+            // var_dump($user);
             return true;
         }
         return false;
@@ -64,10 +64,19 @@ class UserController
         return isset($_SESSION['id']);
     }
 
-    // RESGATAR DADOS DO USUÁRIO
-    public function getUserData($id, $username, $email)
+    // CHECAR SE O USUÁRIO É ADMIN
+    public function isAdmin()
     {
-        return $this->userModel->getUserInfo($id, $username, $email);
+        if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1) {
+            return true;
+        }
+        return false;
+    }
+
+    // RESGATAR DADOS DO USUÁRIO
+    public function getUserData($id, $username, $email, $is_admin)
+    {
+        return $this->userModel->getUserInfo($id, $username, $email, $is_admin);
     }
 }
 

@@ -138,7 +138,7 @@ input#password {
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid transparent;
     background: transparent;
     color: #fff;
     font-size: 1rem;

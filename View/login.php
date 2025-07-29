@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     if ($userController->login($email, $password)) {
-        header('Location: View/home.php');
+        header('Location: ../index.php');
         exit();
     } else {
         $loginMessage = "Email ou senha incorretos.";
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
     <header>
-        <img src="../images/Novo Projeto.png" alt="">
+        <img src="../images/gamersvaultlogo.png" alt="">
         <img id="nomelogo" src="../images/nomelogo.png" alt="">
         <button id="btn_register">Registrar</button>
         <button id="btn_login">Login</button>
@@ -47,20 +47,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="login-div">
             <h1>Login</h1>
 
-            <form action="" method="post">
+            <form action="" method="POST">
                 <label id="userEmail" for="email">
                     <i class="bi bi-envelope-at"></i>
-                    <input type="email" id="email" autocomplete="username" placeholder="Email" required>
+                    <input type="email" name="email" id="email" autocomplete="username" placeholder="Email" required>
                 </label>
 
                 <label id="userPassword" for="password">
                     <i class="bi bi-key"></i>
-                    <input type="password" id="password" autocomplete="current-password" placeholder="Senha" required>
+                    <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Senha" required>
                 </label>
                 <button id="btn_entrar" type="submit">ENTRAR</button>
                 Não tem uma conta?
                 <a href="register.php">Registre-se</a>
             </form>
+            <p> <?php echo $loginMessage; ?> </p>
         </div>
 
     </main>
