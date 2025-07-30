@@ -52,6 +52,7 @@ class UserController
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
+            $_SESSION['is_admin'] = $user['is_admin'];
             // var_dump($user);
             return true;
         }

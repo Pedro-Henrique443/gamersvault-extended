@@ -37,13 +37,15 @@ header h3 {
 
 #btn_perfil,
 #btn_biblioteca,
-#btn_comunidade {
+#btn_comunidade,
+#btn_publicar {
   width: 7rem;
 }
 
 #btn_perfil,
 #btn_biblioteca,
 #btn_comunidade,
+#btn_publicar,
 #btn_notificacao,
 #btn_conta {
   font-family: "Courier New", Courier, monospace;
@@ -74,7 +76,8 @@ header h3 {
 
 #btn_perfil::after,
 #btn_biblioteca::after,
-#btn_comunidade::after {
+#btn_comunidade::after,
+#btn_publicar::after {
   content: "";
   display: block;
   width: 0;
@@ -98,7 +101,8 @@ header h3 {
 
 #btn_perfil:hover::after,
 #btn_biblioteca:hover::after,
-#btn_comunidade:hover::after {
+#btn_comunidade:hover::after,
+#btn_publicar:hover::after {
   width: 80%;
 }
 
@@ -186,7 +190,7 @@ input#title,
 input#price,
 input#developer,
 input#publisher,
-input#cover_image {
+input#game_cover {
   display: block;
   width: 100%;
   border: none;
@@ -206,7 +210,7 @@ input#title:focus,
 input#price:focus,
 input#developer:focus,
 input#publisher:focus,
-input#cover_image:focus {
+input#game_cover:focus {
   border-bottom: 2px solid #06bcef;
 }
 
@@ -236,6 +240,7 @@ form a {
   color: #06bcef;
   text-decoration: none;
 }
+
 .cadastro-game {
   margin-top: 6rem;
   justify-items: center;

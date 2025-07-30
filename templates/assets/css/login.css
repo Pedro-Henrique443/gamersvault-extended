@@ -55,6 +55,10 @@ header h3 {
     font-size: 2rem;
     margin-bottom: 3rem;
 }
+#btn_register a, #btn_login a {
+    color: white;
+    text-decoration: none;
+}
 
 #btn_register,
 #btn_login {
@@ -77,6 +81,8 @@ header h3 {
     outline: none;
     position: relative;
     font-size: 1.15rem;
+    border: none;
+    text-decoration: none;
 }
 
 #btn_register::after,
@@ -93,6 +99,7 @@ header h3 {
     left: 0;
     right: 0;
     bottom: 0.3rem;
+    
 }
 
 

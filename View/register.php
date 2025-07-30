@@ -1,4 +1,5 @@
 <?php
+session_start();
 // BUSCANDO E CARREGANDO O ARQUIVO AUTOLOAD
 require_once '../vendor/autoload.php';
 
@@ -53,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header>
         <img src="../images/gamersvaultlogo.png" alt="">
         <img id="nomelogo" src="../images/nomelogo.png" alt="">
-        <button id="btn_register">Registrar</button>
-        <button id="btn_login">Login</button>
+        <button id="btn_register"><a href="../View/register.php">Registrar</a></button>
+        <button id="btn_login"><a href="../View/login.php">Login</a></button>
     </header>
 
     <main>

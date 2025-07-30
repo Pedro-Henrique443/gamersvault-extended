@@ -35,15 +35,26 @@ header h3 {
   font-size: 1.5rem;
 }
 
-#btn_perfil,
-#btn_biblioteca,
-#btn_comunidade {
+.header-left button {
   width: 7rem;
+  font-family: "Courier New", Courier, monospace;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.15rem;
 }
 
-#btn_perfil,
-#btn_biblioteca,
-#btn_comunidade,
 #btn_notificacao,
 #btn_conta {
   font-family: "Courier New", Courier, monospace;
@@ -77,9 +88,7 @@ header h3 {
   font-size: 1.5rem;
 }
 
-#btn_perfil::after,
-#btn_biblioteca::after,
-#btn_comunidade::after {
+.header-left button::after{
   content: "";
   display: block;
   width: 0;
@@ -101,9 +110,7 @@ header h3 {
   outline: none;
 }
 
-#btn_perfil:hover::after,
-#btn_biblioteca:hover::after,
-#btn_comunidade:hover::after {
+.header-left button:hover::after {
   width: 80%;
 }
 
@@ -156,7 +163,7 @@ header h3 {
   border: none;
   border-radius: 7px;
   width: 260%;
-  height: 160%;
+  height: 40px;
 }
 
 footer {
@@ -239,6 +246,7 @@ form.d-flex {
   font-size: 1rem;
   padding: 0.2rem 1rem;
 }
+
 .search-wrapper {
   width: 100%;
   justify-content: space-between;
@@ -251,17 +259,28 @@ form.d-flex {
   height: 55vh;
   object-fit: contain;
 }
+
 .games-card {
   background: none;
   border: 1px solid white;
   width: 250px;
-  height: 250px;
+  /* height: 250px; */
   border-radius: 12px;
 }
+
+.games-card p{
+  font-size: 0.8rem;
+  margin-bottom: 1px;
+  color: #767676;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
 .games-card h2 {
   font-size: 1.4rem;
   /* text-align: center; */
   margin-left: 0.5rem;
+  margin-bottom: 0.1rem;
   color: #93d4ff;
 }
 
@@ -286,10 +305,13 @@ form.d-flex {
   border-radius: 2rem;
   margin: 0 auto;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
+
 .games-card img {
   border-radius: 12px 12px 0 0;
 }
+
 .contain-card-games {
   display: flex;
   flex-wrap: wrap;
@@ -297,6 +319,7 @@ form.d-flex {
   gap: 1rem;
   width: 100%;
 }
+
 .explore-games1 h1 {
   margin-top: 2rem;
   color: #ffffff;
