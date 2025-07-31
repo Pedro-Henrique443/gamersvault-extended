@@ -35,6 +35,16 @@ class GameController
     {
         return $this->gameModel->getAllGames();
     }
+
+    public function purchaseGame($user_id, $game_id, $price_paid)
+    {
+        return $this->gameModel->purchaseGame($user_id, $game_id, $price_paid);
+    }
+
+    public function hasPurchased($user_id, $game_id)
+    {
+        return $this->gameModel->hasPurchased($user_id, $game_id);
+    }
 }
 
 ?>

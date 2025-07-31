@@ -58,6 +58,7 @@ $games = $gameController->getAllGames();
         <div class="header-right">
             <button id="btn_notificacao"><i class="bi bi-bell"></i></button>
             <button id="btn_conta"><i class="bi bi-person-circle"></i></button>
+            <button id="btn_exit"><i class="bi bi-box-arrow-right"></i></button>
         </div>
     </header>
 
@@ -172,7 +173,15 @@ $games = $gameController->getAllGames();
                             <p><?php echo htmlspecialchars($game['developer']); ?></p>
                             <p><?php echo htmlspecialchars($game['publisher']); ?></p>
                             <span>R$ <?php echo number_format($game['price'], 2, ',', '.'); ?></span>
-                            <button>Comprar</button>
+                            <?php if ($gameController->hasPurchased($id, $game['id'])): ?>
+                                <button type="button" disabled style="background: #aaa; cursor: not-allowed;">Comprado</button>
+                            <?php else: ?>
+                                <form method="POST" action="Controller/purchase.php" style="display:inline;">
+                                    <input type="hidden" name="game_id" value="<?php echo $game['id']; ?>">
+                                    <input type="hidden" name="price_paid" value="<?php echo $game['price']; ?>">
+                                    <button type="submit">Comprar</button>
+                                </form>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -190,6 +199,7 @@ $games = $gameController->getAllGames();
         </div>
     </footer>
 
+    <script src="templates/assets/js/exitButton.js"></script>
     <script src="templates/assets/js/publishButton.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

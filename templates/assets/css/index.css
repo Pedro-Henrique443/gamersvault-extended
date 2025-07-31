@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #016fb9;
+  background-color: #016fb9 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +56,8 @@ header h3 {
 }
 
 #btn_notificacao,
-#btn_conta {
+#btn_conta,
+#btn_exit {
   font-family: "Courier New", Courier, monospace;
   height: 2.5rem;
   flex: 0 0 auto;
@@ -80,7 +81,8 @@ header h3 {
   width: 100px;
 }
 
-#btn_conta i {
+#btn_conta i,
+#btn_exit i {
   font-size: 2rem;
 }
 
@@ -309,6 +311,7 @@ form.d-flex {
 }
 
 .games-card img {
+  aspect-ratio: 16 / 9;
   border-radius: 12px 12px 0 0;
 }
 

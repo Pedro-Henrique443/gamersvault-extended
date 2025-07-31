@@ -79,13 +79,41 @@ class Game
         try {
             $sql = "SELECT * FROM games ORDER BY created_at DESC";
             $stmt = $this->db->prepare($sql);
-            
+
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         } catch (PDOException $error) {
             echo "Erro ao buscar jogos: " . $error->getMessage();
+            return false;
+        }
+    }
+    public function purchaseGame($user_id, $game_id, $price_paid)
+    {
+        try {
+            $sql = "INSERT INTO purchases (user_id, game_id, price_paid, purchase_date) VALUES (:user_id, :game_id, :price_paid, NOW())";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+            $stmt->bindParam(":game_id", $game_id, PDO::PARAM_INT);
+            $stmt->bindParam(":price_paid", $price_paid, PDO::PARAM_STR);
+            return $stmt->execute();
+        } catch (PDOException $error) {
+            echo "Erro ao registrar compra: " . $error->getMessage();
+            return false;
+        }
+    }
+
+    public function hasPurchased($user_id, $game_id)
+    {
+        try {
+            $sql = "SELECT COUNT(*) FROM purchases WHERE user_id = :user_id AND game_id = :game_id";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+            $stmt->bindParam(":game_id", $game_id, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchColumn() > 0;
+        } catch (PDOException $error) {
             return false;
         }
     }
