@@ -30,9 +30,3 @@ git clone https://github.com/sm64isdabest/gamersvault.git
 - [Jira](https://www.atlassian.com/software/jira)
 - [Canva](https://www.canva.com/)
 - [Photopea](https://www.photopea.com/)
-
-## 👤 Autores:
-
-<a href="https://github.com/spaceza/handify/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=spaceza/handify" />
-</a>
