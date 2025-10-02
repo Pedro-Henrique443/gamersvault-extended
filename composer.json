@@ -3,7 +3,7 @@
     "type": "project",
     "autoload": {
         "classmap": [
-            "src/"
+            "Controller/"
         ],
         "psr-4": {
             "ThiagoLuanPedroJuan\\Gamersvault\\": "GamersVault/",
