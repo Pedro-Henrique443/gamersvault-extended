@@ -9,9 +9,9 @@ class GameController
 {
     private $gameModel;
 
-    public function __construct()
+    public function __construct(Game $gameModel)
     {
-        $this->gameModel = new Game();
+        $this->gameModel = $gameModel;
     }
 
     // REGISTRO DE JOGO
