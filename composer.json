@@ -2,6 +2,9 @@
     "name": "thiago-luan-pedro-juan/gamersvault",
     "type": "project",
     "autoload": {
+        "classmap": [
+            "src/"
+        ],
         "psr-4": {
             "ThiagoLuanPedroJuan\\Gamersvault\\": "GamersVault/",
             "Controller\\": "Controller/",
@@ -9,5 +12,7 @@
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "12"
+    }
 }
