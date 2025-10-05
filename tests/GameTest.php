@@ -27,6 +27,17 @@ class GameTest extends TestCase
 
         $this->assertFalse($result);
     }
+
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function testComprarJogo(): void
+    {
+        $this->mockGameModel->method('purchaseGame')->willReturn(true);
+
+        $result = $this->gameController->purchaseGame(1, 2, 59.99);
+
+        $this->assertTrue($result);
+    }
+
 }
 
 ?>
