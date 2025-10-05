@@ -38,6 +38,17 @@ class GameTest extends TestCase
         $this->assertTrue($result);
     }
 
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function testVerificarSeComprado(): void
+    {
+        // Simples: mocka hasPurchased para retornar true e verifica o resultado
+        $this->mockGameModel->method('hasPurchased')->willReturn(true);
+
+        $result = $this->gameController->hasPurchased(1, 2);
+
+        $this->assertTrue($result);
+    }
+
 }
 
 ?>
