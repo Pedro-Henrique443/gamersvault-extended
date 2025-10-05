@@ -49,6 +49,24 @@ class GameTest extends TestCase
         $this->assertTrue($result);
     }
 
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function testVerificarInformacoesJogo(): void
+    {
+        $this->mockGameModel->method('getGameInfo')->willReturn([
+            'game_cover' => 'cover.jpg',
+            'title' => 'Fictional Game',
+            'price' => '49.99',
+            'developer' => 'DevStudio',
+            'publisher' => 'PubHouse'
+        ]);
+
+        $gameResult = $this->gameController->getGameData(2, 'cover.jpg', 'Fictional Game', 49.99, 'DevStudio', 'PubHouse');
+
+        $this->assertNotNull($gameResult);
+        $this->assertEquals('Fictional Game', $gameResult['title']);
+        $this->assertEquals('49.99', (string)$gameResult['price']);
+    }
+
 }
 
 ?>

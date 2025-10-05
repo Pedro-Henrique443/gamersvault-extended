@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"GameTest::testInformacoesInvalidas":0.006,"GameTest::testComprarJogo":0,"GameTest::testVerificarSeComprado":0}}
+{"version":1,"defects":[],"times":{"GameTest::testInformacoesInvalidas":0.006,"GameTest::testComprarJogo":0,"GameTest::testVerificarSeComprado":0,"GameTest::testVerificarInformacoesJogo":0.141}}
