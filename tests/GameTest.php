@@ -33,7 +33,11 @@ class GameTest extends TestCase
     {
         $this->mockGameModel->method('purchaseGame')->willReturn(true);
 
-        $result = $this->gameController->purchaseGame(1, 2, 59.99);
+        $user_id = 1;
+        $game_id = 2;
+        $price_paid = 59.99;
+
+        $result = $this->gameController->purchaseGame($user_id, $game_id, $price_paid);
 
         $this->assertTrue($result);
     }
