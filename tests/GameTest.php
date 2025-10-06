@@ -45,10 +45,13 @@ class GameTest extends TestCase
     #[\PHPUnit\Framework\Attributes\Test]
     public function it_should_verify_if_purchased(): void
     {
-        // Simples: mocka hasPurchased para retornar true e verifica o resultado
-        $this->mockGameModel->method('hasPurchased')->willReturn(true);
+        $user_id = 1;
+        $game_id = 2;
 
-        $result = $this->gameController->hasPurchased(1, 2);
+        $this->mockGameModel->expects($this->once())->method('hasPurchased')
+        ->with($user_id, $game_id) ->willReturn(true);
+
+        $result = $this->gameController->hasPurchased($user_id, $game_id);
 
         $this->assertTrue($result);
     }
@@ -68,7 +71,7 @@ class GameTest extends TestCase
 
         $this->assertNotNull($gameResult);
         $this->assertEquals('Fictional Game', $gameResult['title']);
-        $this->assertEquals('49.99', (string)$gameResult['price']);
+        $this->assertEquals('49.99', (string) $gameResult['price']);
     }
 
 }
