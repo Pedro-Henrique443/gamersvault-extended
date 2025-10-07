@@ -3,7 +3,7 @@
         'name' => 'thiago-luan-pedro-juan/gamersvault',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd28c1339ec807666eb8fd52a1356d211853a7064',
+        'reference' => 'bb5addb497ab2c047f44b96cc67bb3d434ea757b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -278,7 +278,7 @@
         'thiago-luan-pedro-juan/gamersvault' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd28c1339ec807666eb8fd52a1356d211853a7064',
+            'reference' => 'bb5addb497ab2c047f44b96cc67bb3d434ea757b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
