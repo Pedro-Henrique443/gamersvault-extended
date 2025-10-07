@@ -14,7 +14,7 @@ class UserTest extends TestCase
     public function setUp(): void
     {
         $this->mockUserModel = $this->createMock(User::class);
-        $this->UserController = new UserController($this->mockUserModel);
+        $this->userController = new UserController($this->mockUserModel);
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
