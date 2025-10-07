@@ -1,8 +1,8 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-
 use Controller\UserController;
+
+use PHPUnit\Framework\TestCase;
 
 use Model\User;
 
@@ -24,16 +24,16 @@ class UserTest extends TestCase
         $this->mockUserModel->method('getUserByEmail')->willReturn([
             'id' => 1,
             'username' => 'João',
-             'email' => 'joao@example.com',
-             'password' => '12345',
+            'email' => 'joao@example.com',
+            'password' => '12345',
         ]);
 
         $_SESSION = [];
 
-    $result = $this->userController->login('joao@example','1234');
+        $result = $this->userController->login('joao@example', '1234');
 
-    $this->assertFalse($result,'Login falha com senha incorreta');
-    $this->assertArrayNotHasKey('id',$_SESSION,'Sessão não deve conter ID do usuário');
+        $this->assertFalse($result, 'Login falha com senha incorreta');
+        $this->assertArrayNotHasKey('id', $_SESSION, 'Sessão não deve conter ID do usuário');
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -41,7 +41,7 @@ class UserTest extends TestCase
     public function it_should_check_user_by_email()
     {
         $this->mockUserModel->method('getUserByEmail')->willReturn([
-            'id'=> 2,
+            'id' => 2,
             'username' => 'Gustavo',
             'email' => 'gustavo@example.com',
             'password' => '12345'
@@ -49,9 +49,9 @@ class UserTest extends TestCase
 
         $result = $this->userController->checkUserByEmail('gustavo@example.com');
 
-        $this->assertNotNull($result,'Usuário não deveria ser nulo');
-        $this->assertEquals('gustavo@example.com',$result['email']);
-        $this->assertEquals('Gustavo',$result['username']);
+        $this->assertNotNull($result, 'Usuário não deveria ser nulo');
+        $this->assertEquals('gustavo@example.com', $result['email']);
+        $this->assertEquals('Gustavo', $result['username']);
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -71,31 +71,33 @@ class UserTest extends TestCase
             $this->userController->isLoggedIn(),
             'Deve retornar false quando não ID na sessão'
         );
-    }    
+    }
 
-      #[\PHPUnit\Framework\Attributes\Test]
-      public function it_should_be_able_to_create_user(){
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function it_should_be_able_to_create_user()
+    {
 
         $this->mockUserModel->method('registerUser')->willReturn(true);
-        
+
         $userResult = $this->userController->createUser('Juan Arthur', 'arthur@example.com', '10203040');
 
         return $this->assertTrue($userResult);
 
-      }
-      
-      #[\PHPUnit\Framework\Attributes\Test]
-      public function it_shouldnt_be_able_to_create_user_with_null_credentials(){
+    }
+
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function it_shouldnt_be_able_to_create_user_with_null_credentials()
+    {
 
         $this->mockUserModel->method('registerUser')->willReturn(true);
-        
+
         $userResult = $this->userController->createUser('Juan Arthur', null, '10203040');
 
         return $this->assertFalse($userResult);
 
-      }
-      
-       #[\PHPUnit\Framework\Attributes\Test]
+    }
+
+    #[\PHPUnit\Framework\Attributes\Test]
     public function it_should_be_able_to_sign_in()
     {
         $this->mockUserModel->method('getUserByEmail')->willReturn([
@@ -112,7 +114,9 @@ class UserTest extends TestCase
         $this->assertEquals(1, $_SESSION['id']);
         $this->assertEquals('Juan Arthur', $_SESSION['user_fullname']);
         $this->assertEquals('arthur@example.com', $_SESSION['email']);
-    
+
+    }
+
     #[\PHPUnit\Framework\Attributes\Test]
     public function it_should_verify_if_is_an_admin()
     {
@@ -132,7 +136,6 @@ class UserTest extends TestCase
 
         $this->assertFalse($userResult);
     }
-
 }
 
 ?>

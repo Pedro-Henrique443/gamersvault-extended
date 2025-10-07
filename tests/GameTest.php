@@ -67,16 +67,21 @@ class GameTest extends TestCase
             'publisher' => 'CD Projekt'
         ]);
 
-        $result = $this->gameController->getGameData(2, 'the_witcher_3_cover.jpg', 'The Witcher 3: Wild Hunt', 39.99, 'CD Projekt Red',
-        'CD Projekt'
-    );
+        $result = $this->gameController->getGameData(
+            2,
+            'the_witcher_3_cover.jpg',
+            'The Witcher 3: Wild Hunt',
+            39.99,
+            'CD Projekt Red',
+            'CD Projekt'
+        );
 
-    $this->assertNotNull($result);
-    $this->assertEquals('the_witcher_3_cover.jpg', $result['game_cover']);
-    $this->assertEquals('The Witcher 3: Wild Hunt', $result['title']);
-    $this->assertEquals('39.99', (string) $result['price']);
-    $this->assertEquals('CD Projekt Red', $result['developer']);
-    $this->assertEquals('CD Projekt', $result['publisher']);
+        $this->assertNotNull($result);
+        $this->assertEquals('the_witcher_3_cover.jpg', $result['game_cover']);
+        $this->assertEquals('The Witcher 3: Wild Hunt', $result['title']);
+        $this->assertEquals('39.99', (string) $result['price']);
+        $this->assertEquals('CD Projekt Red', $result['developer']);
+        $this->assertEquals('CD Projekt', $result['publisher']);
 
     }
 
