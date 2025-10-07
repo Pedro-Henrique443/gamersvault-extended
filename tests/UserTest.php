@@ -55,6 +55,25 @@ class UserTest extends TestCase {
         $this->assertEquals(1, $_SESSION['id']);
         $this->assertEquals('Juan Arthur', $_SESSION['user_fullname']);
         $this->assertEquals('arthur@example.com', $_SESSION['email']);
+    
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function it_should_verify_if_is_an_admin()
+    {
+        $_SESSION['is_admin'] = 1;
+
+        $userResult = $this->userController->isAdmin();
+
+        $this->assertTrue($userResult);
+    }
+
+    #[\PHPUnit\Framework\Attributes\Test]
+    public function it_should_verify_if_isnt_an_admin()
+    {
+        $_SESSION['is_admin'] = 0;
+
+        $userResult = $this->userController->isAdmin();
+
+        $this->assertFalse($userResult);
     }
 
 }
